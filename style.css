@@ -216,7 +216,7 @@ html,body {
 
 
 .serendale-ai .frame:hover {
-  color:blue;
+  color:black;
 }
 
 .serendale-ai .text-wrapper-8 {
@@ -334,7 +334,7 @@ a {
 /* Tooltip text */
 .tooltip .tooltiptext {
   visibility: hidden;
-  width: 249px;
+  width: 250px;
   background-color: #555;
   color: #fff;
   text-align: center;
@@ -370,4 +370,41 @@ a {
   visibility: visible;
   opacity: 1;
 
+}
+
+.marquee {
+  height: 25px;
+  width: 1300px;
+  bottom: 20px;
+  background-color: black;
+  color: white;
+  overflow: hidden;
+  position: relative;
+}
+
+.marquee div {
+  display: block;
+  width: 200%;
+  height: 30px;
+
+  position: absolute;
+  overflow: hidden;
+  font-family: "Chillax-Medium", Helvetica;
+  animation: marquee 15s linear infinite;
+}
+
+.marquee span {
+  float: left;
+  width: 50%;
+  color: white;
+}
+
+@keyframes marquee {
+  0% { left: 0; }
+  100% { left: -100%; }
+}
+
+.marquee span a {
+  color: white;
+  text-decoration: none; /* Optional: removes underline from the link */
 }
